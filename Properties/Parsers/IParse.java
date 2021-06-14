@@ -1,6 +1,12 @@
 package Parsers;
 
-public interface IParse
+import java.util.InvalidPropertiesFormatException;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+
+public interface IParse<T>
 {
-	public String parse();
+	public T parse(String path) throws InvalidPropertiesFormatException, IOException, FileNotFoundException;
+
+	public String get(String key);
 }
