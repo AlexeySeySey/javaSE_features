@@ -1,11 +1,9 @@
 package Contracts;
 
-public interface IMaker 
-{
-	public final String defaultStuff = "Some Stuff";
+public interface IMaker {
+    public final String defaultStuff = "Some Stuff";
 
-	default String make()
-	{
-		return this.defaultStuff;
-	}
+    default String make() {
+        return this.defaultStuff;
+    }
 }

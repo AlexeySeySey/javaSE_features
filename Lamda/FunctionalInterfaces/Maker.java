@@ -1,9 +1,8 @@
-package FunctionalInterfaces;     
+package FunctionalInterfaces;
 
-        @FunctionalInterface
-        public interface Maker<T>
-        {
-                String make(T something);
-            
-        }
+@FunctionalInterface
+public interface Maker<T> {
+    String make(T something);
+
+}
 

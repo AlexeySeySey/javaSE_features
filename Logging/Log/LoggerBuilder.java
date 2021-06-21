@@ -3,8 +3,7 @@ package Log;
 import java.io.IOException;
 import java.util.logging.*;
 
-public class LoggerBuilder
-{
+public class LoggerBuilder {
     String logFile = "Desktop/JAVA/Logging/resources/app.log";
 
     String className = LoggerBuilder.class.getName();
@@ -13,36 +12,31 @@ public class LoggerBuilder
 
     Filter filter = null;
 
-    public LoggerBuilder setClassName(String className)
-    {
+    public LoggerBuilder setClassName(String className) {
         this.className = className;
 
         return this;
     }
 
-    public LoggerBuilder setLoggingFile(String path)
-    {
+    public LoggerBuilder setLoggingFile(String path) {
         this.logFile = path;
 
         return this;
     }
 
-    public LoggerBuilder setFilter(Filter filter)
-    {
+    public LoggerBuilder setFilter(Filter filter) {
         this.filter = filter;
 
         return this;
     }
 
-    public LoggerBuilder setFormatter(Formatter formatter)
-    {
+    public LoggerBuilder setFormatter(Formatter formatter) {
         this.formatter = formatter;
 
         return this;
     }
 
-    public Logger build() throws IOException
-    {
+    public Logger build() throws IOException {
         var handler = new FileHandler("%h/" + this.logFile);
         if (this.formatter != null) {
             handler.setFormatter(this.formatter);
