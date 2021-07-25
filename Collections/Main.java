@@ -19,9 +19,7 @@ class Main {
                 .map((item) -> {
                     item.setValue(item.getValue() + additionToItems);
                 });
-        for (BaseItem item : dequeService.getCollection()) {
-            System.out.println(item.getValue());
-        }
+        System.out.println(dequeService.getCollection());
     }
 
     public static void tryingOutList() {

@@ -12,4 +12,8 @@ public final class StringItem extends BaseItem<String, StringItem> {
     public int compareTo(StringItem item) {
         return this.value.length() > item.getValue().length() ? 1 : 0;
     }
+
+    public String toString() {
+        return this.value;
+    }
 }
